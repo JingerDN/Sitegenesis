@@ -108,151 +108,70 @@ function CloseItemsTabs() {
     }}
 //-------------------Our--Services----End---------------------------------//
 //-------------Our--Amazing--Work-----------------------------------------//
-
-let items=document.getElementsByClassName('items')[0];
-items.onmousedown=function (){
+let itemAll=document.getElementById('All');
+itemAll.onmousedown=function (){
     console.log('Mousedown on items All');
     CloseItems();
     this.classList.add('active-items');
+    Tubname=this.id;
+    HideImages();
+    ShowImages();
 }
-items=document.getElementsByClassName('items')[1];
+items=document.getElementById('Graphicdesign');
 items.onmousedown=function (){
     console.log('Mousedown on items GraphicDesign');
     CloseItems();
     this.classList.add('active-items');
+    Tubname=this.id;
+    ShowImages();
 }
-items=document.getElementsByClassName('items')[2];
+items=document.getElementById('Webdesign');
 items.onmousedown=function (){
     console.log('Mousedown on items Web Design');
     CloseItems();
     this.classList.add('active-items');
+    Tubname=this.id;
+    HideImages();
+    ShowImages();
+
 }
-items=document.getElementsByClassName('items')[3];
+items=document.getElementById('Landingpages');
 items.onmousedown=function (){
     console.log('Mousedown on items Landing pages');
     CloseItems();
     this.classList.add('active-items');
+    Tubname=this.id;
+    HideImages();
+    ShowImages();
 }
-items=document.getElementsByClassName('items')[4];
+items=document.getElementById('Wordpress');
 items.onmousedown=function (){
     console.log('Mousedown on items Wordpress');
     CloseItems();
     this.classList.add('active-items');
-
+    Tubname=this.id;
+    HideImages();
+    ShowImages();
 
 }
+function ShowImages() {
+    let contentNew=document.body.getElementsByClassName("Webdesign");
+    for(var i =0;i<contentNew.length;i++){
+        //contentNew[i].classList.add("active-image");
+        contentNew[i].style.display="flex";
+    }return false;
+}
+function HideImages() {
+    let content=document.body.getElementsByClassName("picture");
+    for(var i =0;i<content.length;i++){
+    //content[i].classList.add("image-off");
+    content[i].style.display="none";
+}}
 function CloseItems() {
     items = document.getElementsByClassName('items');
     for (var i=0; i<items.length; i++) {
         items[i].classList.remove('active-items');
     }}
-//-------------Our--Amazing--Work-end------------------------------------//
-function CloseImages() {
-    let removeImg = document.getElementsByClassName('images-container')[0];
-    removeImg.style.display="none";
-    //alert('Image container not visible') ;
-};
-
-let WebList='';
-let isPushedTab=false;
-function FindImages(){
-    console.log(WebList);
-    console.log(WebList.length);
-    const imgArrey=Array.from(WebList);//получили массив из NodeList
-    console.log(imgArrey);
-    var result =imgArrey.map(function(a) {return a.dataset.src;});
-    console.log(result);//получили массив адресов
-    return result;
-}
-document.addEventListener('click',function (e) {
-    if (e.target.id === 'Wordpress') {
-        if (!isPushedTab) {
-            CloseImages();
-            isPushedTab = true;
-            WebList= document.getElementsByName('Wordpress');
-            let result = FindImages();
-            for (i = 0; i < result.length; i++) {
-                const item = document.createElement('div');
-                const imgBlock = document.createElement('img');
-                imgBlock.src = result[i];
-                imgBlock.classList.add('portfolio-item');
-                item.appendChild(imgBlock);
-                let wrapp = document.getElementById('wrapp');
-                //wrapp.style.display='none';
-                wrapp.appendChild(item);
-                wrapp.style.display='flex';
-            }
-        }isPushedTab=false;
-    }
-    else if (e.target.id === 'WebDesign') {
-        if (!isPushedTab) {
-            CloseImages();
-            isPushedTab = true;
-            WebList= document.getElementsByName('WebDesign');
-            let result = FindImages();
-            for (i = 0; i < result.length; i++) {
-                const item = document.createElement('div');
-                const imgBlock = document.createElement('img');
-                imgBlock.src = result[i];
-                imgBlock.classList.add('portfolio-item');
-                item.appendChild(imgBlock);
-                let wrapp = document.getElementById('wrapp');
-                wrapp.style.display='none';
-                wrapp.appendChild(item);
-                wrapp.style.display='flex';
-            }}isPushedTab=false;
-    }
-    else if (e.target.id === 'GraphicDesign') {
-        if (!isPushedTab) {
-            CloseImages();
-            isPushedTab = true;
-            WebList= document.getElementsByName('GraphicDesign');
-            let result = FindImages();
-            for (i = 0; i < result.length; i++) {
-                const item = document.createElement('div');
-                const imgBlock = document.createElement('img');
-                imgBlock.src = result[i];
-                imgBlock.classList.add('portfolio-item');
-                item.appendChild(imgBlock);
-                let wrapp = document.getElementById('wrapp');
-                wrapp.appendChild(item);
-                wrapp.style.display='flex';
-            }}isPushedTab=false;
-    }
-    else if (e.target.id === 'Landingpages') {
-        if (!isPushedTab) {
-            CloseImages();
-            isPushedTab = true;
-            WebList= document.getElementsByName('Landingpages');
-            let result = FindImages();
-            for (i = 0; i < result.length; i++) {
-                const item = document.createElement('div');
-                const imgBlock = document.createElement('img');
-                imgBlock.src = result[i];
-                imgBlock.classList.add('portfolio-item');
-                item.appendChild(imgBlock);
-                let wrapp = document.getElementById('wrapp');
-                wrapp.appendChild(item);
-                wrapp.style.display='flex';
-            }}isPushedTab=false;
-    }
-    else if (e.target.id === 'All') {
-        if (!isPushedTab) {
-            CloseImages();
-            isPushedTab = true;
-            WebList= document.getElementsByName('All');
-            let result = FindImages();
-            for (i = 0; i < result.length; i++) {
-                const item = document.createElement('div');
-                const imgBlock = document.createElement('img');
-                imgBlock.src = result[i];
-                imgBlock.classList.add('portfolio-item');
-                item.appendChild(imgBlock);
-                let wrapp = document.getElementById('wrapp');
-                wrapp.appendChild(item);
-                wrapp.style.display='flex';
-        }}isPushedTab=false;}
-});
 
 //-------------Our--Amazing--Work-end------------------------------------//
 //---------------------------Slick--Slider-------------------------------//

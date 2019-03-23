@@ -424,10 +424,10 @@ h3{
     justify-content: flex-start;
     width: 1143px;
 }
-.block-img{
+.image-off{
     display: none;
 }
-.portfolio-item{
+.active-image{
     display:flex;
 }
 /*----------------------------------Breaking News---------------------------*/
@@ -715,4 +715,39 @@ h3{
 .commonFooter span:nth-child(3){
     color: #18cfab;
     text-transform: lowercase;
+}
+.Gallery3{
+    width: 370px;
+    height: 453px;
+    grid-gap: 3px;
+}
+.top{
+    display: flex;
+}
+.top img:first-child{
+    margin-right: 3px;
+    padding-bottom: 3px;
+}
+.top img:nth-child(2){
+    padding-right: 0px;
+    padding-bottom: 3px;
+}
+.cub{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cub img{
+    padding-bottom: 3px;
+    padding-right: 3px;
+}
+.cub img:nth-child(3){
+    padding-right: 0px;
+}
+.galItem:hover{
+    background-color:  rgba(73, 71, 63, 0.6);
+    position: absolute;
+    top:0;
+}
+.galItem{
+    position: relative;
 }
