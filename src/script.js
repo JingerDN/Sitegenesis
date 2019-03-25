@@ -110,61 +110,78 @@ function CloseItemsTabs() {
 //-------------Our--Amazing--Work-----------------------------------------//
 let itemAll=document.getElementById('All');
 itemAll.onmousedown=function (){
-    console.log('Mousedown on items All');
     CloseItems();
     this.classList.add('active-items');
     Tubname=this.id;
     HideImages();
-    ShowImages();
+    All();
 }
-items=document.getElementById('Graphicdesign');
-items.onmousedown=function (){
-    console.log('Mousedown on items GraphicDesign');
+   items=document.getElementById('Graphicdesign');
+    items.onmousedown=function (){
     CloseItems();
     this.classList.add('active-items');
     Tubname=this.id;
-    ShowImages();
+    HideImages();
+    Graphicdesign();
 }
 items=document.getElementById('Webdesign');
 items.onmousedown=function (){
-    console.log('Mousedown on items Web Design');
     CloseItems();
     this.classList.add('active-items');
     Tubname=this.id;
     HideImages();
-    ShowImages();
+    Webdesign();
 
 }
 items=document.getElementById('Landingpages');
 items.onmousedown=function (){
-    console.log('Mousedown on items Landing pages');
     CloseItems();
     this.classList.add('active-items');
     Tubname=this.id;
     HideImages();
-    ShowImages();
+    Landingpages();
 }
 items=document.getElementById('Wordpress');
 items.onmousedown=function (){
-    console.log('Mousedown on items Wordpress');
     CloseItems();
     this.classList.add('active-items');
     Tubname=this.id;
     HideImages();
-    ShowImages();
-
+    Wordpress();
 }
-function ShowImages() {
+function All() {
+    let contentNew=document.body.getElementsByClassName("All");
+    for(var i =0;i<contentNew.length;i++){
+        contentNew[i].style.display="flex";
+    }return false;
+}
+function Graphicdesign() {
+    let contentNew=document.body.getElementsByClassName("Graphicdesign");
+    for(var i =0;i<contentNew.length;i++){
+        contentNew[i].style.display="flex";
+    }return false;
+}
+function Landingpages() {
+    let contentNew=document.body.getElementsByClassName("Landingpages");
+    for(var i =0;i<contentNew.length;i++){
+        contentNew[i].style.display="flex";
+    }return false;
+}
+function Webdesign() {
     let contentNew=document.body.getElementsByClassName("Webdesign");
     for(var i =0;i<contentNew.length;i++){
-        //contentNew[i].classList.add("active-image");
+        contentNew[i].style.display="flex";
+    }return false;
+}
+function Wordpress() {
+    let contentNew=document.body.getElementsByClassName("Wordpress");
+    for(var i =0;i<contentNew.length;i++){
         contentNew[i].style.display="flex";
     }return false;
 }
 function HideImages() {
-    let content=document.body.getElementsByClassName("picture");
+    let content=document.getElementById("wrapp").children;
     for(var i =0;i<content.length;i++){
-    //content[i].classList.add("image-off");
     content[i].style.display="none";
 }}
 function CloseItems() {
@@ -174,6 +191,20 @@ function CloseItems() {
     }}
 
 //-------------Our--Amazing--Work-end------------------------------------//
+$(document).ready(function(){
+    $('.load').click(function () {
+    let load=$("#load-img .image-off");
+console.log(load);
+    $('.ourAmazingWork').css({'height':'1818px'});
+    load.slice(0,12).removeClass('image-off').addClass('active-image');//поменяли класс для 12 изображений
+console.log(load);
+    load=$("#load-img .image-off");
+    if(load.length==0){
+    $('.ourAmazingWork').css({'height':'2436px'});
+    $('.load').fadeOut('slow');
+    }
+    })
+});
 //---------------------------Slick--Slider-------------------------------//
 $(document).ready(function(){
     $('.slider-for').slick({
@@ -196,31 +227,26 @@ $(document).ready(function(){
 
     });
 });
-
-
+//---------------------------Slick--Slider-------------------------------//
 var container = document.querySelector('#galleryContainer');
 var msnry = new Masonry( container, {
     columnWidth: 370,
     itemSelector: '.galItem',
     gutter:17
 });
+$(document).ready(function(){
+    $('.loadMore').click(function () {
+        let containerClear = $("#galleryContainer .galItem img").addClass("image-off");
+        console.log(containerClear);
 
-//var containerRctngl=document.querySelector('#rectangle');
-//var msnty1=new Masonry( container, {
-  //  columnWidth: 180,
-    //itemSelector: '.rectangleItem',
-    //gutter:3
-//});
-//let containerSquare=document.querySelector('#square');
-//let msnty2=new Masonry( container, {
-  //  columnWidth: 120,
-    //itemSelector: '.item-inside',
-    //gutter:3
-//});
-//let gallery3=document.querySelector('#containerGallery3');
-//let msnty3=new Masonry( container, {
-  //  stamp:"#rectangle",
-    //columnWidth: 120,
-    //itemSelector: '.item-inside',
-    //gutter:3
-//});
+        let containerNew = $("#galleryContainerMore .galItemMore img").toggleClass("image-off");
+        console.log(containerNew);
+        $('.loadMore').fadeOut('slow');
+        //}
+    });
+
+});
+
+
+
+

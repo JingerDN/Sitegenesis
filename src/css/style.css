@@ -409,15 +409,8 @@ h3{
     color: #18cfab;
     border-top:2px solid #18cfab;
 }
-.images-container{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: stretch;
-    justify-content: flex-start;
-    height: 623px;
-    width: 1143px;
-}
-#wrapp{
+
+#wrapp,#load-img{
     display:flex;
     flex-wrap:wrap;
     align-items: stretch;
@@ -679,7 +672,7 @@ h3{
     padding-bottom: 3px;
 }/*-----------------------------*/
 
-.load{
+.load,.loadMore{
    padding-left: 40px;
     border-radius: 4px;
     background-color:  #18cfab;
@@ -695,7 +688,7 @@ h3{
     text-transform: uppercase;
     position: relative;
 }
-.load span{
+.load span,.loadMore span{
     position: absolute;
   left:20px;
     font-size: 30px;
