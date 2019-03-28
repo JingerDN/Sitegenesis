@@ -190,12 +190,12 @@ function CloseItems() {
         items[i].classList.remove('active-items');
     }}
 
-//-------------Our--Amazing--Work-end------------------------------------//
+//-------------Our--Amazing--Work-Add more-----------------------------------//
 $(document).ready(function(){
     $('.load').click(function () {
     let load=$("#load-img .image-off");
 console.log(load);
-    $('.ourAmazingWork').css({'height':'1818px'});
+    $('.ourAmazingWork').css({'height':'+=618'});
     load.slice(0,12).removeClass('image-off').addClass('active-image');//поменяли класс для 12 изображений
 console.log(load);
     load=$("#load-img .image-off");
@@ -205,6 +205,21 @@ console.log(load);
     }
     })
 });
+//-------------Our--Amazing--Work---hover-img---------------------------------//
+$(function() {
+    $('#wrapp > img').hover(
+        function() {
+            var currentSrc = $( this ).attr('src');
+            var scrToStorage=localStorage.setItem('keySrc',currentSrc);
+            $( this ).attr('src','css/img/web%20design/HoverRectangle.png');
+        }, function() {
+            var prevSrc=localStorage.getItem('keySrc');
+            $( this ).attr('src', prevSrc);
+            localStorage.clear();
+        }
+    );
+});
+
 //---------------------------Slick--Slider-------------------------------//
 $(document).ready(function(){
     $('.slider-for').slick({
@@ -227,24 +242,42 @@ $(document).ready(function(){
 
     });
 });
-//---------------------------Slick--Slider-------------------------------//
+//---------------------------Masonry-------------------------------//
+
+
+$(document).ready(function(){
+$(".item-masonry").hover(
+    function () {
+        $(this).find(".cover-item-gallery").fadeIn();
+    },
+    function f() {
+        $(this).find(".cover-item-gallery").fadeOut();
+    })
+});
 var container = document.querySelector('#galleryContainer');
 var msnry = new Masonry( container, {
-    columnWidth: 370,
-    itemSelector: '.galItem',
-    gutter:17
+columnWidth: 370,
+temSelector: '.item-masonry',
+gutter:17
+});
+//---------------------------Masonry-hover img------------------------------//
+$(document).ready(function(){
+    $(".top .left,.top .right").hover(
+        function () {
+            $(this).find(".cover-top").fadeIn();
+        },
+        function f() {
+            $(this).find(".cover-top").fadeOut();
+        })
 });
 $(document).ready(function(){
-    $('.loadMore').click(function () {
-        let containerClear = $("#galleryContainer .galItem img").addClass("image-off");
-        console.log(containerClear);
-
-        let containerNew = $("#galleryContainerMore .galItemMore img").toggleClass("image-off");
-        console.log(containerNew);
-        $('.loadMore').fadeOut('slow');
-        //}
-    });
-
+    $(".inside-cub .inside").hover(
+        function () {
+            $(this).find(".cover-cub").fadeIn();
+        },
+        function f() {
+            $(this).find(".cover-cub").fadeOut();
+        })
 });
 
 

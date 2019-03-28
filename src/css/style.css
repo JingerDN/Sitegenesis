@@ -165,7 +165,6 @@ margin: 0;
 /*-------------------------Footer-properties-------------------------*/
 .wrapper-wellcome{
     height: 1385px;
-    /*height: 100vh;*/
 }
 .Footer{
     display: flex;
@@ -191,7 +190,9 @@ margin: 0;
     font-weight: 700;
     text-transform: uppercase;
 }
-
+.Footer div:nth-child(even) p{
+    padding-top: 68px;
+}
 .Footer div:nth-child(even){
     color: white;
     display: flex;
@@ -649,9 +650,99 @@ h3{
     height: 1366px;
     background-color: aliceblue;
 }/*------------------------*/
-.galItem {
+.item-masonry {
     width: 370px;
     margin-bottom: 19px;
+    position: relative;
+ }
+.item-masonry img{
+    width: 100%;
+    height: auto;
+}
+.right img{
+    width: 181px;
+    height: 171px;
+    padding-left: 3px;
+}
+.top{
+    display: flex;
+    position: relative;
+}
+.top img{
+    padding-bottom: 3px;
+
+}
+.inside-cub{
+    position: relative;
+}
+.inside-cub .cover-cub{
+    background-color: #000;
+    opacity: .5;
+    position: absolute;
+    display: none;
+    width:119px;
+    height: 89px;
+}
+.cover-cub a {
+    display: inline-block;
+    border-radius: 10%;
+    width: 40px;
+    height: 40px;
+    border: transparent;
+    background-color: dodgerblue;
+    position: relative;
+    top:27%;
+    left:14%;
+}
+.cover-cub a i{
+    color:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top: -18px;
+    margin-left: -16px;
+}
+.cover-item-gallery,.cover-top,.cover-cub{
+    background-color: #000;
+    opacity: .5;
+    position: absolute;
+    width: 100%;
+    top:0;
+    bottom: 0;
+    display: none;
+}
+.cover-item-gallery a,.cover-top a{
+    display: inline-block;
+    border-radius: 10%;
+    width: 80px;
+    height: 80px;
+    border: transparent;
+    background-color: dodgerblue;
+    position: relative;
+    top:35%;
+    left:25%;
+}
+.cover-item-gallery a i,.cover-top a i{
+    color:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+.cover-top{
+    width:180px;
+    height: 168px;
+}
+.cover-top a {
+    width: 50px;
+    height: 50px;
+    top: 35%;
+    left: 20%;
+}
+.cover-top a i{
+    margin-top: -17px;
+    margin-left: -16px;
 }
 #galleryContainer{
     width: 1157px;
@@ -660,18 +751,6 @@ h3{
 #containerGallery3{
     width: 370px;
 }
-.item-inside{
-    width: 120px;
-    padding-bottom: 3px;
-}/*-----------------------------*/
-#rectangle{
-    width: 370px;
-}
-.rectangleItem{
-    width: 180px;
-    padding-bottom: 3px;
-}/*-----------------------------*/
-
 .load,.loadMore{
    padding-left: 40px;
     border-radius: 4px;
@@ -690,7 +769,7 @@ h3{
 }
 .load span,.loadMore span{
     position: absolute;
-  left:20px;
+    left:20px;
     font-size: 30px;
 }
 .commonFooter{
@@ -714,33 +793,16 @@ h3{
     height: 453px;
     grid-gap: 3px;
 }
-.top{
-    display: flex;
-}
-.top img:first-child{
-    margin-right: 3px;
-    padding-bottom: 3px;
-}
-.top img:nth-child(2){
-    padding-right: 0px;
-    padding-bottom: 3px;
-}
 .cub{
     display: flex;
     flex-wrap: wrap;
 }
 .cub img{
-    padding-bottom: 3px;
+    width: 121px;
+    height: 92px;
     padding-right: 3px;
+    padding-bottom: 3px;
 }
 .cub img:nth-child(3){
     padding-right: 0px;
-}
-.galItem:hover{
-    background-color:  rgba(73, 71, 63, 0.6);
-    position: absolute;
-    top:0;
-}
-.galItem{
-    position: relative;
 }

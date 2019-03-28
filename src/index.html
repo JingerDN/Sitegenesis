@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
@@ -231,7 +232,7 @@ Suspendisse commodo porttitor scelerisque. Fusce nec tellus maximus, semper nequ
     <div class="newsContainer">
 <a class="over" href="http://qaru.site/questions/24465/from-an-array-of-objects-extract-value-of-a-property-as-array">
     <div class="upperSquare">12<br>Feb</div>
-    <img src="css/img/BreakingNews/Layer%2047.png" height="208" width="263"" alt="">
+    <img src="css/img/BreakingNews/Layer%2047.png" height="208" width="263" alt="">
     <div class="newsUnderTxt"><div>amazing image post</div>
         <div>by admin</div><span>&#124</span><div>2 comments</div>
     </div>
@@ -350,28 +351,196 @@ Suspendisse commodo porttitor scelerisque. Fusce nec tellus maximus, semper nequ
 <div id="gallery" class="styleHeader additional" >
     <h3>Gallery of best images</h3>
 <div id="galleryContainer">
-    <div class="galItem"><img src="css/img/Gallery/1.png"></div>
-    <div class="galItem"><img src="css/img/Gallery/2.png"></div>
-    <div class="galItem"><div class="Gallery3">
+    <div class="item-masonry">
+        <img src="css/img/Gallery/1.png" width="370"height="259" alt="">
+        <div class="cover-item-gallery">
+            <a href="#">
+                <i class="fas fa-search fa"></i>
+            </a>
+                <a href="#">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+        </div>
+    </div>
+    <div class="item-masonry">
+        <img src="css/img/Gallery/2.png"width="370" height="380" alt="">
+        <div class="cover-item-gallery">
+            <a href="#">
+                <i class="fas fa-search fa"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+        </div>
+    </div>
+    <div class="item-masonry"><div class="Gallery3">
         <div class="top">
-            <div class="left"><img src="css/img/Gallery/Rectangle%207.png"></div>
-            <div class="right"><img src="css/img/Gallery/Rectangle%208%20(1).png" height="168" width="181"></div></div>
-        <div class="cub"><div class="inside1"><img src="css/img/Gallery/Rectangle%208%20(2).png"></div>
-            <div class="inside2"><img src="css/img/Gallery/Rectangle%208%20copy%20(1).png"></div>
-            <div class="inside3"><img src="css/img/Gallery/Rectangle%208%20copy%202%20(2).png"></div>
-            <div class="inside4"><img src="css/img/Gallery/Rectangle%208%20(1).png"></div>
-            <div class="inside5"><img src="css/img/Gallery/Rectangle%208%20copy.png"></div>
-            <div class="inside6"><img src="css/img/Gallery/Rectangle%208%20copy%202%20(1).png"></div>
-            <div class="inside7"><img src="css/img/Gallery/Rectangle%208.png"></div>
-            <div class="inside8"><img src="css/img/Gallery/Rectangle%208%20copy%20(2).png"></div>
-            <div class="inside9"><img src="css/img/Gallery/Rectangle%208%20copy%202.png"></div>
+            <div class="left"><img src="css/img/Gallery/Rectangle%207.png " width="180" height="168">
+                <div class="cover-top">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="right"><img src="css/img/Gallery/Rectangle%208%20(1).png"  width="181" height="168">
+                <div class="cover-top">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div></div></div>
+        <div class="cub">
+           <div class="inside-cub"> <div class="inside"><img src="css/img/Gallery/Rectangle%208%20(2).png" width="124"height="92">
+                <div class="cover-cub">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+           </div></div>
+            <div class="inside-cub"><div class="inside"><img src="css/img/Gallery/Rectangle%208%20copy%20(1).png"width="119"height="92">
+                <div class="cover-cub">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+            </div></div>
+            <div class="inside-cub"><div class="inside"><img src="css/img/Gallery/Rectangle%208%20copy%202%20(2).png"width="115"height="92">
+                <div class="cover-cub">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+            </div></div>
+            <div class="inside-cub"><div class="inside"><img src="css/img/Gallery/Rectangle%208%20(1).png" width="124"height="92">
+                <div class="cover-cub">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+            </div></div>
+            <div class="inside-cub"><div class="inside"><img src="css/img/Gallery/Rectangle%208%20copy.png"width="119" height="92">
+                <div class="cover-cub">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+            </div></div>
+            <div class="inside-cub"><div class="inside"><img src="css/img/Gallery/Rectangle%208%20copy%202%20(1).png"width="115"height="92">
+                <div class="cover-cub">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+            </div></div>
+            <div class="inside-cub"><div class="inside"><img src="css/img/Gallery/Rectangle%208.png"width="124"height="92">
+                <div class="cover-cub">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+            </div></div>
+            <div class="inside-cub"><div class="inside"><img src="css/img/Gallery/Rectangle%208%20copy%20(2).png"width="119" height="92">
+                <div class="cover-cub">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+            </div></div>
+            <div class="inside-cub"><div class="inside"><img src="css/img/Gallery/Rectangle%208%20copy%202.png"width="115"height="92">
+                <div class="cover-cub">
+                    <a href="#">
+                        <i class="fas fa-search fa"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </div>
+            </div></div>
         </div></div></div>
-
-    <div class="galItem"><img src="css/img/Gallery/4.png"></div>
-    <div class="galItem"><img src="css/img/Gallery/5.png"></div>
-    <div class="galItem"><img src="css/img/Gallery/6.png"></div>
-    <div class="galItem"><img src="css/img/Gallery/7.png"></div>
-    <div class="galItem"><img src="css/img/Gallery/8.png"></div>
+    <div class="item-masonry">
+        <img src="css/img/Gallery/4.png" alt="">
+        <div class="cover-item-gallery">
+            <a href="#">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+        </div>
+    </div>
+    <div class="item-masonry">
+        <img src="css/img/Gallery/5.png" alt="">
+        <div class="cover-item-gallery">
+            <a href="#">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+        </div>
+    </div>
+    <div class="item-masonry">
+        <img src="css/img/Gallery/6.png" alt="">
+        <div class="cover-item-gallery">
+            <a href="#">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+        </div>
+    </div>
+    <div class="item-masonry">
+        <img src="css/img/Gallery/7.png" alt="">
+        <div class="cover-item-gallery">
+            <a href="#">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+        </div>
+    </div>
+    <div class="item-masonry">
+        <img src="css/img/Gallery/8.png" alt="">
+        <div class="cover-item-gallery">
+            <a href="#">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+        </div>
+    </div>
 </div>
     <div id="galleryContainerMore">
         <div class="galItemMore"><img src="css/img/BreakingNews/Layer%2047.png" class="image-off"></div>
@@ -383,10 +552,12 @@ Suspendisse commodo porttitor scelerisque. Fusce nec tellus maximus, semper nequ
         <div class="galItemMore"><img src="css/img/BreakingNews/Layer%2055.png" class="image-off"></div>
         <div class="galItemMore"><img src="css/img/BreakingNews/Layer%2056.png" class="image-off"></div>
     </div>
+
     <button class="style loadMore"><span> + </span> load more</button>
 </div>
 <div class="commonFooter">
     <span> &copy; </span><span>copyright 2015 </span><span> theHam </span><span>| all rights reserved</span>
+</div>
 </div>
 <script src="css/js/Imageload.pkgd.min.js"></script>
 <script src="css/js/masonry.pkgd.min.js"></script>
